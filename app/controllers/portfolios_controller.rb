@@ -4,15 +4,16 @@ class PortfoliosController < ApplicationController
   end
 
   def new
-    @portfolio_items = Portfolio.new
+    @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_items = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
-      if @portfolio_items.save
-        format.html { redirect_to portfolio_path, notice: 'Your portfolio has been submitted.' }
+      if @portfolio_item.save
+        format.html { redirect_to portfolios_path, notice: 'Your portfolio has been submitted.' }
       else
         format.html { render :new }
       end
