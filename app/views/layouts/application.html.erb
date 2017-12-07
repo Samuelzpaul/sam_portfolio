@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SamPortfolio</title>
+    <title>DevcampPortfolio</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,17 +10,21 @@
 
   <body>
     <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
 
-      <% if current_user %>
+    <p class="alert"><%= alert %></p>
+
+    <% if current_user %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <% else %>
+    <% else %>
       <%= link_to "Register", new_user_registration_path %>
       <%= link_to "Login", new_user_session_path %>
-
-      <% end %>
+    <% end %>
 
     <%= yield %>
+
+    <% if session[:source] %>
+      <p>Thanks for visiting me from <%= session[:source] %></p>
+    <% end %>
 
   </body>
 </html>
