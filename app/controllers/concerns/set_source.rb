@@ -1,8 +1,8 @@
 module SetSource
-extend ActiveSupport::Convern
+extend ActiveSupport::Concern
 
 
-include do
+included do
   before_action :set_source
 end
 
