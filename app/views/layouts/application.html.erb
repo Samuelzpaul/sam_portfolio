@@ -13,17 +13,24 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
 
-    <%= render "share/nav", location: "top" %>
+      <div class="site-wrapper-inner">
 
-    <%= login_helper %>
+        <div class="cover-container">
 
-    <%= yield %>
+          <%= render "share/application_nav", location: "top" %>
+
+          <%= login_helper %>
+
+          <%= yield %>
     
-    <%= copyright_generator %>
+          <%= copyright_generator %>
 
-    <%= source_helper("application") %>
+          <%= source_helper("application") %>
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>
