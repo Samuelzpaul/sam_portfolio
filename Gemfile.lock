@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Samuelzpaul/paul_view_tool
+  revision: c43c89ef45826a1a188e1ca07300858a52b1315d
+  specs:
+    paul_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -191,6 +197,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.1)
   listen (>= 3.0.5, < 3.2)
+  paul_view_tool!
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.4)
