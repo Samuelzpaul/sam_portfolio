@@ -12,7 +12,7 @@
   <body>
  
 <%= render 'share/portfolio_nav' %>
-<%= render 'share/portfolio_masthead' %>
+<%= render 'share/portfolio_masthead' unless logged_in?(:site_admin) %>
  
     <%= yield %>
   
