@@ -168,7 +168,6 @@ body {
 .card-block {
   color: black;
   text-align: left;
-  padding: 10px;
 }
 
 .auth-links a {
@@ -179,9 +178,13 @@ body {
   text-align: right;
 }
 
-.login > .card{
+.login > .card {
   width: 22rem;
   margin: 0 auto;
   float: none;
-  margin-bottom: 10px;
+}
+
+.app-nav span {
+  margin-left: 15px;
+  margin-right: 15px;
 }
