@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    <meta name ="keywords" content="<%= @seo_keywords %>" />
+
+    <meta name="keywords" content="<%= @seo_keywords %>" />
+
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
- 
-<%= render 'share/portfolio_nav' %>
-<%= render 'share/portfolio_masthead' unless logged_in?(:site_admin) %>
- 
-    <%= yield %>
-  
-<%= render 'share/portfolio_footer' %>
 
-    <%= source_helper("application")%>
-   </body>
+  <body>
+    <%= render 'share/portfolio_nav' %>
+    <%= render 'share/portfolio_masthead' unless logged_in?(:site_admin) %>
+
+    <%= yield %>
+
+    <%= render 'share/portfolio_footer' %>
+
+    <%= source_helper("application") %>
+  </body>
 </html>
