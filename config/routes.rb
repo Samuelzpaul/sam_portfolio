@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
   end
-
   get 'angular-items', to: 'portfolios#angular'
   get 'portfolios/:id', to: 'portfolios#show', as: 'portfolios_show'
  
@@ -18,6 +17,8 @@ Rails.application.routes.draw do
       get :toggle_status
   end
 end
+
   mount ActionCable.server => '/cable'
+  
   root to: 'pages#home'
 end
