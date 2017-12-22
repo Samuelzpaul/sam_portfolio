@@ -182,10 +182,23 @@ h6, .h6 {
 }
 
 .comment-attribution {
-  font-size: .em
+  font-size: .5em;
   font-style: italic;
 }
 
 .comment-name {
   wont-weight: 700;
+}
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 8px 0 8px;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
+}
+
+.blog_sidebar_source {
+  margin-top: 20px;
 }
