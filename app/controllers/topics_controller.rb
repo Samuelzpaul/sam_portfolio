@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_action :side_bar_topics
   layout 'blog'
   def index
-    @topics = Topics.all
+    @topics = Topic.all
   end
 
   def show
