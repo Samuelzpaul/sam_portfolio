@@ -234,3 +234,23 @@ body {
 .app-card-container a {
   color: blue;
 }
+
+.card-nav {
+    position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #73747b5e;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+}
+
+.card {
+  background-color: #73747b5e;
+  color: #ffffffc7;
+  }
