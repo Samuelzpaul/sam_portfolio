@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "jquery-ui";
 @import "gritter";
 
 /*
@@ -122,6 +123,10 @@ body {
   font-weight: bold;
 }
 
+.cover-heading {
+  margin-top: 18%;  
+}
+
 
 /*
  * Footer
@@ -211,6 +216,7 @@ body {
 
 .app-footer {
   color: white;
+  z-index: 10;
 }
 
 .tech-news {
@@ -257,7 +263,10 @@ body {
 .card {
   background-color: #73747b5e;
   color: #ffffffc7;
+  z-index: -30;
+
   }
+
 /*
 * Nav Custom
 */
