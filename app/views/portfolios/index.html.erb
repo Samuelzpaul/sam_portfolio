@@ -3,7 +3,8 @@
     <%= source_helper("alert alert-warning") %>
 
     <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
-      <%= link_to "Create new item", new_portfolio_path if logged_in?(:site_admin) %><br>
+      <%= link_to "Create new item", new_portfolio_path if logged_in?(:site_admin) %>
+      <br class="padding">
 
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
